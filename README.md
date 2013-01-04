@@ -1,12 +1,8 @@
 # Blanq Bootstrap Menu
 
-## Version
-
-* ~Current Version:0.2~
-
 ## Description
 
-This is a plug-in for the Blanq WordPress theme which extends the built-in Walker class to better integrate with Twitter Bootstrap Navbar. The [original Extended Walker class](https://gist.github.com/1597994) included in the plugin is credited to [johnmegahan](https://gist.github.com/johnmegahan).
+Plug-in for the Blanq WordPress theme. Extends the built-in Walker class to better integrate with the Twitter Bootstrap Framework navbar. The [original Extended Walker class](https://gist.github.com/1597994) included in the plugin is credited to [johnmegahan](https://gist.github.com/johnmegahan).
 
 ## Installation
 
@@ -26,6 +22,10 @@ This is a plug-in for the Blanq WordPress theme which extends the built-in Walke
 
 * [Extended Walker](https://gist.github.com/1597994) by [johnmegahan](https://gist.github.com/johnmegahan)
 * [scbFramework](https://github.com/scribu/wp-scb-framework/wiki)
+
+## Version
+
+* ~Current Version:0.2~
 
 ## Changelog
 
