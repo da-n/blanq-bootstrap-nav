@@ -14,7 +14,7 @@ Usage
 
 A menu needs to be available within WordPress and its ID should be passed as an option. By default the plugin automatically creates a menu called `Top Bar` with the id `top-bar` which you can use. To render a menu simply drop the following code into a Blanq Theme PHP template file, adjust the options as required.
 
-<pre>
+`````php
 if (function_exists('blanq_bootstrap_nav')) {
   blanq_bootstrap_nav(array(
     'theme_location' => 'top-bar', // the id of the menu
@@ -24,11 +24,11 @@ if (function_exists('blanq_bootstrap_nav')) {
     'sub' => false // to be documented
   ));
 }
-</pre>
+`````
 
 Example with branding and search menu:
 
-<pre>
+`````php
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
@@ -57,7 +57,7 @@ Example with branding and search menu:
     </div>
   </div>
 </div>
-</pre>
+`````
 
 Planned Features
 ===========
