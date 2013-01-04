@@ -2,7 +2,7 @@
 
 ## Version
 
-* ~Current Version:0.1a~
+* ~Current Version:0.2~
 
 ## Description
 
@@ -29,6 +29,8 @@ This is a plug-in for the Blanq WordPress theme which extends the built-in Walke
 
 ## Changelog
 
-### 0.1a
-
-* Initial alpha
+* 4 January 2013 0.2
+    * Extended Walker
+    * Cleaning up code
+* 4 January 2013 0.1a
+    * Initial alpha
