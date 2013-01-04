@@ -26,10 +26,10 @@ A menu needs to be available within WordPress and its ID should be passed as an 
 if (function_exists('blanq_bootstrap_nav')) {
   blanq_bootstrap_nav(array(
     'theme_location' => 'top-bar', // the id of the menu
-    'depth' => 2, // how many levels deep should the menu go, 0 for unlimited
+    'depth' => 0, // how many levels deep should the menu go, 0 for unlimited
     'container' => false, // should a container be created
-    'menu_class' => 'nav', // the menu classes, requires minimum 'nav' class is included
-    'sub' => false // to be documented
+    'container_class' => 'navbar', // the container classes, requires 'navbar' class at minimum
+    'menu_class' => 'nav' // the menu classes, requires 'nav' class at minimum
   ));
 }
 `````
@@ -50,11 +50,11 @@ Example with branding and search menu:
       <?php 
       if (function_exists('blanq_bootstrap_nav')) {
         blanq_bootstrap_nav(array(
-          'theme_location' => 'top-bar',
+          'theme_location' => 'main_navigation',
           'depth' => 1,
           'container' => false,
-          'menu_class' => 'nav',
-          'sub' => false
+          'container_class' => 'navbar',
+          'menu_class' => 'nav'
         ));
       }
       ?>
@@ -72,15 +72,13 @@ Acknowledgments
 
 * [Extended Walker class](https://gist.github.com/1597994)
 
-Changelog
-===========
-
-Current Version: 1.0
-
-### 1.0
-* Initial release
-
 Credits
 ===========
 
 This plugin is built and maintained by [Daniel Davidson](https://github.com/da-n/)
+
+Changelog
+===========
+
+### 1.0
+* Initial release

@@ -8,7 +8,7 @@ Author: Daniel Davidson
 Author URI: http://github.com/da-n
 */
 
-// create a default menu
+// Create a default menu 'top-bar'
 add_action( 'after_setup_theme', '_blanq_bootstrap_nav_setup' );
 if ( ! function_exists( '_blanq_bootstrap_nav_setup' ) ):
   function _blanq_bootstrap_nav_setup(){
@@ -19,11 +19,17 @@ if ( ! function_exists( '_blanq_bootstrap_nav_setup' ) ):
   }
 endif;
 
-// create bootstrap nav
+// Build Bootstrap Nav using array options
 function blanq_bootstrap_nav( $args=array() ) {
 
-  $default = array('theme_location' => 'top-bar', 'depth' => 0, 'container' => false, 'container_class' => 'navbar', 'menu_class' => 'nav');
-  $settings = array_merge($default, $args);
+  $default = array(
+    'theme_location' => 'top-bar',
+    'depth' => 0,
+    'container' => false,
+    'container_class' => 'navbar',
+    'menu_class' => 'nav'
+  );
+  $settings = array_merge( $default, $args );
    
   if ( $settings['theme_location'] ) {
     
@@ -41,7 +47,7 @@ function blanq_bootstrap_nav( $args=array() ) {
       'walker' => new BootstrapNavMenuWalker()
     );
     
-    wp_nav_menu($args);
+    wp_nav_menu( $args );
     
     $container_end;
   }
