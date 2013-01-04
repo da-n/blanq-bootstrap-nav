@@ -1,22 +1,22 @@
 <?php
 
-// // create a default menu
-// add_action( 'after_setup_theme', '_blanq_bootstrap_nav_setup' );
-// if ( ! function_exists( '_blanq_bootstrap_nav_setup' ) ):
-// 	function _blanq_bootstrap_nav_setup(){
-// 		add_action( 'init', 'register_menu' );
-// 		function register_menu(){
-// 			register_nav_menu( 'bootstrap-nav', 'Bootstrap Nav' ); 	
-// 		}	
-// 	}
-// endif;
+// create a default menu
+add_action( 'after_setup_theme', '_blanq_bootstrap_nav_setup' );
+if ( ! function_exists( '_blanq_bootstrap_nav_setup' ) ):
+	function _blanq_bootstrap_nav_setup(){
+		add_action( 'init', 'register_menu' );
+		function register_menu(){
+			register_nav_menu( 'top-bar', 'Top Bar' ); 	
+		}	
+	}
+endif;
 
 // function to create bootstrap nav
 
 
 
 function blanq_bootstrap_nav( $args=array() ) {
-    $default = array('theme_location' => null, 'depth' => 0, 'container' => false, 'menu_class' => 'nav', 'sub' => false);
+    $default = array('theme_location' => 'top-bar', 'depth' => 0, 'container' => false, 'menu_class' => 'nav', 'sub' => false);
     $settings = array_merge($default, $args);
    
     // if ( $settings['theme_location'] ) {
@@ -29,35 +29,35 @@ function blanq_bootstrap_nav( $args=array() ) {
 
 
 
-function blanq_bootstrap_nav($theme_location=false, $depth=0, $container=false, $menu_class='nav', $subnav=false, $wrapper=true) {
+// function blanq_bootstrap_nav($theme_location=false, $depth=0, $container=false, $menu_class='nav', $subnav=false, $wrapper=true) {
 
-	if ($theme_location) {
-		if ($wrapper === true) {
-			if ($subnav === true) { 
-				$blanq_bootstrap_nav_classes = 'navbar navbar-fixed-top navbar-subnav';
-			} else {
-				$blanq_bootstrap_nav_classes = 'navbar';
-			}
-			echo '<div class="' . $blanq_bootstrap_nav_classes . '"><div class="navbar-inner"><div class="container">';
-		}
+// 	if ($theme_location) {
+// 		if ($wrapper === true) {
+// 			if ($subnav === true) { 
+// 				$blanq_bootstrap_nav_classes = 'navbar navbar-fixed-top navbar-subnav';
+// 			} else {
+// 				$blanq_bootstrap_nav_classes = 'navbar';
+// 			}
+// 			echo '<div class="' . $blanq_bootstrap_nav_classes . '"><div class="navbar-inner"><div class="container">';
+// 		}
 		
-		$args = array(
-			'theme_location' => $theme_location,
-			'depth' => $depth,
-			'container' => $container,
-			'menu_class' => $menu_class,
-			'walker' => new BootstrapNavMenuWalker()
-		);
+// 		$args = array(
+// 			'theme_location' => $theme_location,
+// 			'depth' => $depth,
+// 			'container' => $container,
+// 			'menu_class' => $menu_class,
+// 			'walker' => new BootstrapNavMenuWalker()
+// 		);
 		
-		wp_nav_menu($args);
+// 		wp_nav_menu($args);
 		
-		if ($wrapper === true) {
-			echo '</div></div></div>';
-		}
+// 		if ($wrapper === true) {
+// 			echo '</div></div></div>';
+// 		}
 		
-	}
+// 	}
 	
-}
+// }
 
 /**
  * Extended Walker class for use with the

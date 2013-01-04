@@ -5,9 +5,17 @@ Plug-in for the Blanq WordPress theme. Extends the built-in Walker class to bett
 Installation
 ===========
 
+Method 1
+
+1. Download zip archive.
+2. Upload using plugin Upload tool `yourdomain.com/wp-admin/plugin-install.php?tab=upload`.
+3. Activate.
+
+Method 2
+
 1. Download and unzip the archive.
 2. Upload the zip to wp-content/plugins/.
-3. Activate in the WordPress administration area.
+3. Activate.
 
 Usage
 ===========
