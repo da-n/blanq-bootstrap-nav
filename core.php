@@ -12,24 +12,33 @@
 // endif;
 
 // function to create bootstrap nav
+
+
+
+function blanq_bootstrap_nav( $args=array() ) {
+    $default = array('theme_location' => null, 'depth' => 0, 'container' => false, 'menu_class' => 'nav', 'sub' => false);
+    $settings = array_merge($default, $args);
+   
+    // if ( $settings['theme_location'] ) {
+    // 	die('WORKING');
+    // }
+    // else {
+    // 	die('FUCK');
+    // }
+}
+
+
+
 function blanq_bootstrap_nav($theme_location=false, $depth=0, $container=false, $menu_class='nav', $subnav=false, $wrapper=true) {
 
 	if ($theme_location) {
-		
 		if ($wrapper === true) {
-			
 			if ($subnav === true) { 
-				
 				$blanq_bootstrap_nav_classes = 'navbar navbar-fixed-top navbar-subnav';
-				
 			} else {
-				
 				$blanq_bootstrap_nav_classes = 'navbar';
-				
 			}
-			
 			echo '<div class="' . $blanq_bootstrap_nav_classes . '"><div class="navbar-inner"><div class="container">';
-			
 		}
 		
 		$args = array(
