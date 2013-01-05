@@ -47,17 +47,17 @@ Example with branding and search menu:
       </a>
       <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>
       <div class="nav-collapse">
-      <?php 
-      if (function_exists('blanq_bootstrap_nav')) {
-        blanq_bootstrap_nav(array(
-          'theme_location' => 'main_navigation',
-          'depth' => 1,
-          'container' => false,
-          'container_class' => 'navbar',
-          'menu_class' => 'nav'
-        ));
-      }
-      ?>
+        <?php 
+        if (function_exists('blanq_bootstrap_nav')) {
+          blanq_bootstrap_nav(array(
+            'theme_location' => 'main_navigation',
+            'depth' => 1,
+            'container' => false,
+            'container_class' => 'navbar',
+            'menu_class' => 'nav'
+          ));
+        }
+        ?>
         <div class="pull-right">
           <?php get_search_form(); ?>
         </div>

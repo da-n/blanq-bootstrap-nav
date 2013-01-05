@@ -49,7 +49,7 @@ function blanq_bootstrap_nav( $args=array() ) {
     
     wp_nav_menu( $args );
     
-    $container_end;
+    echo $container_end;
   }
 }
 
