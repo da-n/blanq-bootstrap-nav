@@ -1,5 +1,7 @@
 # Blanq Bootstrap Menu
 
+## Warning: this is pre-alpha, only here as a placeholder
+
 Plug-in component for the [Blanq](https://github.com/da-n/blanq) WordPress theme. Extends the built-in Walker class to better integrate with the Twitter Bootstrap Framework navbar. [Original Extended Walker class](https://gist.github.com/1597994) used in this plugin credit to [johnmegahan](https://gist.github.com/johnmegahan).
 
 Installation
@@ -45,22 +47,19 @@ Example with branding and search menu:
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>
+      <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a>
       <div class="nav-collapse">
         <?php 
         if (function_exists('blanq_bootstrap_nav')) {
           blanq_bootstrap_nav(array(
-            'theme_location' => 'main_navigation',
-            'depth' => 1,
+            'theme_location' => 'top-bar',
+            'depth' => 0,
             'container' => false,
             'container_class' => 'navbar',
             'menu_class' => 'nav'
           ));
         }
         ?>
-        <div class="pull-right">
-          <?php get_search_form(); ?>
-        </div>
       </div>
     </div>
   </div>
@@ -72,13 +71,4 @@ Acknowledgments
 
 * [Extended Walker class](https://gist.github.com/1597994)
 
-Credits
-===========
-
-This plugin is built and maintained by [Daniel Davidson](https://github.com/da-n/)
-
-Changelog
-===========
-
-### 1.0
-* Initial release
+ 
